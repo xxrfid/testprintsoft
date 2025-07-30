@@ -10,6 +10,7 @@ Aplikasi manajemen produk sederhana berbasis **CodeIgniter 3**, dengan fitur hit
 
 - `application/` – Folder utama CodeIgniter 3
 - `test_printsoft.sql` – File database MySQL untuk aplikasi ini
+- `screen_capture/` – Folder berisi tangkapan layar (screenshot) tampilan aplikasi
 
 ---
 
@@ -39,3 +40,16 @@ sesuaikan bagian 'database' => 'test_printsoft'
 
 Setelah semua selesai, buka di browser:
 http://localhost/CodeIgniterPrintsoft/product
+
+### Fitur Aplikasi:
+
+- Tambah produk
+- Edit produk
+- Hapus produk
+- Hitung otomatis harga:
+  ~ Jika tipe unit: quantity x price
+  ~ Jika tipe area: quantity x panjang x lebar x price
+
+Pastikan server lokal (Apache dan MySQL) aktif
+Gunakan browser modern (Chrome/Edge/Firefox)
+Jika error muncul, periksa kembali koneksi database dan URL base_url di config.php serta .htaccess
