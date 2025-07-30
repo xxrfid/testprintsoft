@@ -271,7 +271,8 @@
   $("#example1").on("click", ".btnaction.delete", function() {
     $('#inputAct').val('3');
     $('#inputId').val($(this).data('id'));
-    $('#inputNamaGroup').val($(this).data('id'));
+    $('#inputName,#inputPrice,#inputStock,#inputType').val($(this).data('id')).change();
+    $('#inputType').val('area').change();
     Swal.fire({
       title: 'Hapus, Apakah Anda yakin?',
       text: "Anda tidak akan dapat mengembalikan ini!",

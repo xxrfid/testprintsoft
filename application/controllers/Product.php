@@ -54,6 +54,9 @@ class Product extends CI_Controller
 
     public function create()
     {
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            show_error('Method Not Allowed', 405);
+        }
         $data = [
             'name'        => $this->input->post('name'),
             'price'       => $this->input->post('price'),
@@ -79,6 +82,9 @@ class Product extends CI_Controller
 
     public function update($id)
     {
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            show_error('Method Not Allowed', 405);
+        }
         $data = [
             'name'    => $this->input->post('name'),
             'price'   => $this->input->post('price'),
@@ -103,6 +109,9 @@ class Product extends CI_Controller
 
     public function delete($id)
     {
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            show_error('Method Not Allowed', 405);
+        }
         $deleted = $this->m_product->delete($id);
 
         if ($deleted) {
